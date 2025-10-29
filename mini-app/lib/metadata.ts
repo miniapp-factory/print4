@@ -3,6 +3,7 @@ import { Metadata } from "next";
 export const title = "Disney Princess Quiz";
 export const description =
   "Find out which Disney princess you are most similar to by answering 5 fun questions!";
+export const url = process.env.NEXT_PUBLIC_URL ?? "";
 
 export const metadata: Metadata = {
   title,
@@ -10,13 +11,13 @@ export const metadata: Metadata = {
   other: {
     "fc:miniapp": JSON.stringify({
       version: "next",
-      imageUrl: `${process.env.NEXT_PUBLIC_URL}/icon.png`,
+      imageUrl: `${url}/icon.png`,
       ogTitle: title,
       ogDescription: description,
-      ogImageUrl: `${process.env.NEXT_PUBLIC_URL}/icon.png`,
+      ogImageUrl: `${url}/icon.png`,
       button: {
         label: "Open in Mini App",
-        url: `${process.env.NEXT_PUBLIC_URL}`,
+        url: url,
       },
     }),
   },
